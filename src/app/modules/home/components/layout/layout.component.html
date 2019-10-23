@@ -1,0 +1,70 @@
+<p>layout works!</p>
+
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary" class="example-toolbar">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu2</mat-icon>
+      </button>
+      <span>powerBITest</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" >
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>format_color_fill</mat-icon>
+      </button>
+      <mat-menu  #menu="matMenu">
+        <button mat-menu-item (click)="pickColor('')">
+          <div class="color-swatch color-swatch-primary" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('green')">
+          <div class="color-swatch color-swatch-green" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('pink')">
+          <div class="color-swatch color-swatch-pink" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('purple')">
+          <div class="color-swatch color-swatch-purple" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('yellow')">
+          <div class="color-swatch color-swatch-yellow" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('warn')">
+          <div class="color-swatch color-swatch-warn" mat-menu-item></div>
+        </button>
+        <button mat-menu-item (click)="pickColor('ecopetrol-light')">
+          <div class="color-swatch color-swatch-ecopetrol-light" mat-menu-item></div>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  
+  
+  <mat-drawer-container class="sidenav-container" autosize>
+      <mat-drawer #drawer class="example-sidenav"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+        Menu1
+        <button 
+          mat-icon-button 
+          aria-label="Example icon-button with a heart icon"
+          (click)="showFiller = !showFiller">
+          <mat-icon>{{ showFiller ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
+        </button>
+        <mat-nav-list>
+          <a mat-list-item href="#">Link 1 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
+          <a mat-list-item href="#">Link 2 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
+          <a mat-list-item href="#">Link 3 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
+        </mat-nav-list>
+      </mat-drawer>
+    
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button>
+      </div>
+    
+    </mat-drawer-container>
