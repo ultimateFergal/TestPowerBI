@@ -13,10 +13,7 @@
   width: 200px;
 }
 .example-sidenav-content {
-  display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
 }
 .sidenav .mat-toolbar {
   background: inherit;

@@ -7,7 +7,7 @@
     $background-color: mat-color($background, card);
 
     .tile {
-        @include mat-elevation(2);
+        @include mat-elevation(8);
         background-color: mat-color($accent);
         border: 1rem solid $background-color;
         padding: 2rem;

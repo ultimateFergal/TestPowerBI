@@ -11,32 +11,6 @@
     </div>
     <div fxLayout="row" fxLayoutAlign="end center" >
         <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>format_color_fill</mat-icon>
-      </button>
-      <mat-menu  #menu="matMenu">
-        <button mat-menu-item (click)="pickColor('')">
-          <div class="color-swatch color-swatch-primary" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('green')">
-          <div class="color-swatch color-swatch-green" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('pink')">
-          <div class="color-swatch color-swatch-pink" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('purple')">
-          <div class="color-swatch color-swatch-purple" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('yellow')">
-          <div class="color-swatch color-swatch-yellow" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('warn')">
-          <div class="color-swatch color-swatch-warn" mat-menu-item></div>
-        </button>
-        <button mat-menu-item (click)="pickColor('ecopetrol-light')">
-          <div class="color-swatch color-swatch-ecopetrol-light" mat-menu-item></div>
-        </button>
-      </mat-menu>
     </div>
   </mat-toolbar>
   
@@ -61,11 +35,34 @@
       </mat-drawer>
     
       <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
+<!--         <button type="button" mat-button (click)="drawer.toggle()">
           Toggle sidenav
-        </button>
-        <div class="content">
-          <app-welcome>Test</app-welcome>
+        </button> -->
+        <div class="example-sidenav-content" >
+            <!-- fxLayout="row" fxLayoutAlign="space-around center" -->
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+            </div> 
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+                <app-welcome></app-welcome>
+            </div> 
+          
         </div>
       </div>
     
