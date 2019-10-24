@@ -5,12 +5,14 @@ import { map, shareReplay } from 'rxjs/operators';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeService } from 'src/app/core/services/theme.service';
 
+
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
-export class LayoutComponent implements OnInit {
+export class MenuComponent implements OnInit {
+
 
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 

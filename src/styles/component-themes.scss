@@ -1,0 +1,5 @@
+@import '../app/modules/home/components/welcome/welcome.component';
+
+@mixin component-themes($theme) {
+  @include tile-theme($theme);
+}
