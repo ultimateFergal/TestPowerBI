@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { GetReportService } from './core/services/get-report.service';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,12 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
-  providers: [],
+  providers: [
+    GetReportService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

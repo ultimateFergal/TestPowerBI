@@ -28,9 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/swiper/css/swiper.css" 
             ],
-            "scripts": []
+            "scripts": ["node_modules/swiper/js/swiper.js"  ]
           },
           "configurations": {
             "production": {
@@ -93,9 +94,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/swiper/css/swiper.css" 
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/swiper/js/swiper.js"  
+            ]
           }
         },
         "lint": {

@@ -1,0 +1,7 @@
+{
+    "/demoEmbed/*": {
+        "target": "https://apipui.azurewebsites.net",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

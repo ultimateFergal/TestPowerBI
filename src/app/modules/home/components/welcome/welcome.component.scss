@@ -10,15 +10,15 @@
         @include mat-elevation(8);
         background-color: mat-color($accent);
         border: 1rem solid $background-color;
-        padding: 2rem;
+        // padding: 2rem;
         min-height: 200px;
         min-width: 200px;
         
-        p {
+/*         p {
             color: $background-color;
             font-family: 'Pacifico';
             line-height: 2.4rem;
             font-size: 2rem;
-        }
+        } */
     }
   }

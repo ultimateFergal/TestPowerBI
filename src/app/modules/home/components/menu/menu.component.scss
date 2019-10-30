@@ -29,15 +29,40 @@
     background: inherit;
   }
   
-  .example-toolbar {
+/*   .example-toolbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-  }
+  } */
   
   .mat-toolbar.mat-primary {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+    left: 0;
+    right: 0;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
   }

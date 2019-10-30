@@ -1,17 +1,17 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeService } from 'src/app/core/services/theme.service';
-
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewInit {
 
 
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
@@ -19,6 +19,9 @@ export class MenuComponent implements OnInit {
   themeClass;
   showFiller = false;
   isDarkTheme: Observable<boolean>;
+
+  // mySwiper = new Swiper('.swiper-container', { /* ... */ });
+  mySwiper: Swiper;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -38,6 +41,21 @@ export class MenuComponent implements OnInit {
 
   toggleDarkTheme(checked: boolean) {
     this.themeService.setDarkTheme(checked);
+  }
+
+  ngAfterViewInit() {
+    const mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
 
 }
