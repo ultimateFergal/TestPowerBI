@@ -18,7 +18,7 @@ export class GetReportService {
 
     };
     const headers = {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*'
     };
 
