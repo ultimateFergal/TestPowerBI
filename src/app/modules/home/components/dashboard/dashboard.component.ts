@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   constructor(private getReportService: GetReportService) { }
 
   ngOnInit() {
-/*     this.getReportService.getEmbededUrlReport().subscribe(
+    this.getReportService.getEmbededUrlReport().subscribe(
       (data: any) => {
         console.log( data , 'data service fdo');
         this.pbidata = data.data.pbi;
@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
           },
         });
       }
-    ); */
+    );
   }
 
   ngAfterViewInit() {
