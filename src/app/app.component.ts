@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ThemeService } from './core/services/theme.service';
 import { Observable } from 'rxjs';
-import Swiper from 'swiper';
 
 @Component({
   selector: 'app-root',
