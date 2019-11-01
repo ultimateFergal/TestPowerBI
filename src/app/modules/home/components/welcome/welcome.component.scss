@@ -9,7 +9,7 @@
     .tile {
         @include mat-elevation(8);
         background-color: mat-color($accent);
-        border: 1rem solid $background-color;
+        // border: 1rem solid $background-color;
         // padding: 2rem;
         min-height: 200px;
         min-width: 200px;

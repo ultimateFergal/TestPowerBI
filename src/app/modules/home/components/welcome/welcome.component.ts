@@ -44,8 +44,8 @@ export class WelcomeComponent implements OnInit {
       pagename: '',
       visualName: '',
       settings: {
-          filterPaneEnabled: true,
-          navContentPaneEnabled: true
+          filterPaneEnabled: false,
+          navContentPaneEnabled: false
       }
     };
 
