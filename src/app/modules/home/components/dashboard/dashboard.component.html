@@ -1,52 +1,39 @@
   <!-- Swiper -->
-  <div class="swiper-container" style="height: 17em;">
-        <div class="swiper-wrapper">
-          <div *ngFor="let item of pbidata;let i = index" class="swiper-slide"><app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome></div>
-<!--           <div class="swiper-slide">
-            <div class="swiper-slider"><app-welcome></app-welcome></div>
-            <div class="swiper-slider"><app-welcome></app-welcome></div>
-            <div class="swiper-slider"><app-welcome></app-welcome></div>
-          </div> -->
-    <!--       <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-          <div class="swiper-slide">Slide 10</div> -->
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-
-  <!-- Swiper -->
-  <div class="swiper-container" style="height: 17em;">
+<!--   <div class="swiper-container" style="height: 17em;">
     <div class="swiper-wrapper">
       <div *ngFor="let item of pbidata;let i = index" class="swiper-slide"><app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome></div>
-<!--           <div class="swiper-slide">
-        <div class="swiper-slider"><app-welcome></app-welcome></div>
-        <div class="swiper-slider"><app-welcome></app-welcome></div>
-        <div class="swiper-slider"><app-welcome></app-welcome></div>
-      </div> -->
-<!--       <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div> -->
     </div>
-    <!-- Add Pagination -->
+    
     <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
+    
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+  </div> -->
+
+
+  <div class="items" #sliderFdo id="sliderFdo">
+    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
+        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+    </div>
+  </div>
+
+  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="items" #sliderFdo1 id="sliderFdo1">
+    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
+        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+    </div>
+  </div>
+
+  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
+  <a class="next" onclick="swipRight()">&#10095;</a>
+
+  <div class="items" #sliderFdo2 id="sliderFdo2">
+    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
+        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+    </div>
   </div>
     
+  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>

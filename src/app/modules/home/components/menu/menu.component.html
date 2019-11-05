@@ -1,3 +1,4 @@
+
 <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary" class="example-toolbar">
     <div fxLayout="row" fxLayoutAlign="start center">
       <button
@@ -5,22 +6,25 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu2</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>powerBITest</span>
+      <span>PUI TestPowerBI</span>
     </div>
     <div fxLayout="row" fxLayoutAlign="end center" >
-        <mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
+        <small><mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Modo oscuro</mat-slide-toggle></small>
+        &nbsp;
+        <a *ngIf="loggedIn" (click)="logout()" role="button"><span class="glyphicon glyphicon-log-out"></span>Cerrar sessión</a>
     </div>
   </mat-toolbar>
   
-  
+
   <mat-drawer-container class="sidenav-container" autosize>
+
       <mat-drawer #drawer class="example-sidenav"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-        Menu1
+        Menu
         <button 
           mat-icon-button 
           aria-label="Example icon-button with a heart icon"
@@ -28,15 +32,19 @@
           <mat-icon>{{ showFiller ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
         </button>
         <mat-nav-list>
-          <a mat-list-item href="#">Link 1 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
-          <a mat-list-item href="#">Link 2 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
-          <a mat-list-item href="#">Link 3 <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p></a>
+          <a mat-list-item href="#"><mat-icon>home</mat-icon>&nbsp;<p *ngIf="showFiller">Home</p></a>
+          <a mat-list-item href="#"><mat-icon>shopping_cart</mat-icon>&nbsp;<p *ngIf="showFiller">Favoritos</p></a>
+          <a mat-list-item href="#"><mat-icon>shopping_cart</mat-icon>&nbsp;<p *ngIf="showFiller">Catálogos</p></a>
+          <a mat-list-item href="#"><mat-icon>folder</mat-icon>&nbsp;<p *ngIf="showFiller">Carpetas</p></a>
+          <a mat-list-item href="#"><mat-icon>settings_applications</mat-icon>&nbsp;<p *ngIf="showFiller">Configuraciones</p></a>
         </mat-nav-list>
       </mat-drawer>
 
+<!--       <mat-drawer-content>
+        
+      </mat-drawer-content> -->
 
-  <router-outlet></router-outlet>
-
+      <router-outlet class="routerClass" ></router-outlet>
       <div class="example-sidenav-content">
 <!--         <button type="button" mat-button (click)="drawer.toggle()">
           Toggle sidenav

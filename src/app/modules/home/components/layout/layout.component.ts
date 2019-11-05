@@ -32,6 +32,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     this.isDarkTheme = this.themeService.isDarkTheme;
     console.log('ng oninit home components layout');
+
   }
 
   toggleDarkTheme(checked: boolean) {

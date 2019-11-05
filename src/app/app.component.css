@@ -20,3 +20,8 @@
   -webkit-align-items: center;
   align-items: center;
 }
+a.disabled {
+  color: gray;
+  cursor: not-allowed;
+  text-decoration: underline;
+}

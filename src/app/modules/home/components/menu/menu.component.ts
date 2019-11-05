@@ -5,6 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeService } from 'src/app/core/services/theme.service';
 import Swiper from 'swiper';
+import { MsalService } from '@azure/msal-angular';
 
 @Component({
   selector: 'app-menu',
@@ -19,6 +20,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   themeClass;
   showFiller = false;
   isDarkTheme: Observable<boolean>;
+  loggedIn: boolean;
 
   // mySwiper = new Swiper('.swiper-container', { /* ... */ });
   mySwiper: Swiper;
@@ -30,13 +32,20 @@ export class MenuComponent implements OnInit, AfterViewInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver,
-              private themeService: ThemeService) {
+              private themeService: ThemeService,
+              private authService: MsalService) {
 
   }
 
   ngOnInit(): void {
     this.isDarkTheme = this.themeService.isDarkTheme;
     console.log('ng oninit home components layout');
+
+    if (this.authService.getUser()) {
+      this.loggedIn = true;
+   } else {
+     this.loggedIn = false;
+   }
   }
 
   toggleDarkTheme(checked: boolean) {
@@ -56,6 +65,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
         prevEl: '.swiper-button-prev',
       },
     });
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }
