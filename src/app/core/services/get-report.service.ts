@@ -15,8 +15,8 @@ export class GetReportService {
 
   getEmbededUrlReport() {
     // const url = `/pbiRest/getReport`;
-    // const url = `/demoEmbed/getDemoEmbed`;
-    const url =  `https://apipui.azurewebsites.net/demoEmbed/getDemoEmbed`;
+    const url = `/demoEmbed/getDemoEmbed`;
+    // const url =  `https://apipui.azurewebsites.net/demoEmbed/getDemoEmbed`;
     const postBody = {
 
     };
