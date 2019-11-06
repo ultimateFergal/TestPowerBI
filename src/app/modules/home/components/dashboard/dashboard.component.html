@@ -1,39 +1,253 @@
-  <!-- Swiper -->
-<!--   <div class="swiper-container" style="height: 17em;">
-    <div class="swiper-wrapper">
-      <div *ngFor="let item of pbidata;let i = index" class="swiper-slide"><app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome></div>
+<!--   <div class="items" #sliderFdo id="sliderFdo">
+    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
+        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
     </div>
-    
-    <div class="swiper-pagination"></div>
-    
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div> -->
 
+<!--   <a class="prev" (click)="swipLeft($event)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
-  <div class="items" #sliderFdo id="sliderFdo">
-    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
-        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+  <div class="row ">
+      <div class="row__inner items"  #sliderFdo id="sliderFdo">
+        <div class="tile item" *ngFor="let item of pbidata;let i = index">
+          <div class="tile__media">
+              <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+          </div>
+          <div class="tile__details">
+            <div class="tile__title">
+              Top Gear
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row ">
+    <div class="row__inner items"  #sliderFdo1 id="sliderFdo1">
+      <div class="tile item" *ngFor="let item of pbidata;let i = index">
+        <div class="tile__media">
+            <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--   <div class="row ">
+    <div class="row__inner items"  #sliderFdo2 id="sliderFdo2">
 
-  <div class="items" #sliderFdo1 id="sliderFdo1">
-    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
-        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-5.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-6.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-7.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-8.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-9.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-10.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-11.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-12.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-13.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-14.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-15.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-16.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-17.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-18.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile item">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-19.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
-  <a class="next" onclick="swipRight()">&#10095;</a>
-
-  <div class="items" #sliderFdo2 id="sliderFdo2">
-    <div class="item item1" *ngFor="let item of pbidata;let i = index" >
-        <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
-    </div>
-  </div>
-    
-  <a class="prev" (click)="swipLeft($event)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div> -->

@@ -37,8 +37,10 @@ $md-ecopetrol-light: (
     )
 );
 
-$primary: mat-palette($mat-indigo);
-$accent:  mat-palette($mat-pink, A200, A100, A400);
+// $primary: mat-palette($mat-indigo);
+$primary: mat-palette($mat-green);
+// $accent:  mat-palette($mat-pink, A200, A100, A400);
+$accent:  mat-palette($mat-yellow, A200, A100, A400);
 $warn:    mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
 
