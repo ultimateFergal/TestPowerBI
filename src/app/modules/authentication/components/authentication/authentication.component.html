@@ -31,8 +31,8 @@
         </h2> -->
     
         <button type="button" class="hero-button" >
-          <a  *ngIf="!loggedIn"   (click)="login()"><span class="glyphicon glyphicon-log-in"></span>Iniciar sesión</a>
-          <a  *ngIf="loggedIn" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a>
+          <a *ngIf="!loggedIn" (click)="login()"><span class="glyphicon glyphicon-log-in"></span>Iniciar sesión</a>
+          <a *ngIf="loggedIn" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a>
         </button>
       </div>
     </section> 

@@ -4,6 +4,7 @@ import { models } from 'powerbi-client';
 import * as powerbi from 'powerbi-client';
 
 import { GetReportService } from 'src/app/core/services/get-report.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -30,24 +31,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.getReportService.getEmbededUrlReport().subscribe(
       (data: any) => {
         console.log( data , 'data service fdo');
-        this.pbidata = data.data.pbi;
+        this.pbidata = data.data.pbi;//.slice(2,4);
         this.embedToken = data.embedToken;
         console.log(this.pbidata, 'this.config fdo');
         console.log( this.embedToken , 'data service fdo');
 
-        const mySwiper = new Swiper('.swiper-container', {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
+
       }
     );
 
@@ -58,12 +47,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     // const slider = document.querySelector('.items');
     let slider: HTMLElement;
     let slider1: HTMLElement;
+    let slider2: HTMLElement;
     let isDown = false;
     let startX;
     let scrollLeft;
 
     slider = this.sliderFdo.nativeElement;
     slider1 = this.sliderFdo1.nativeElement;
+    slider2 = this.sliderFdo2.nativeElement;
 
     // console.log(slider, 'slider fdo');
     slider.addEventListener('mousedown', (e) => {
@@ -125,6 +116,37 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       const walk = (x - startX) * 3;
 
       slider1.scrollLeft = scrollLeft - walk;
+    });
+
+    // console.log(slider2, 'slider2 fdo');
+    slider2.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider2.classList.add('active');
+
+      startX = e.pageX - slider2.offsetLeft;
+
+      scrollLeft = slider2.scrollLeft;
+    });
+
+    slider2.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider2.classList.remove('active');
+    });
+
+    slider2.addEventListener('mouseup', () => {
+      isDown = false;
+      slider2.classList.remove('active');
+    });
+
+    slider2.addEventListener('mousemove', (e) => {
+      if (!isDown) { return; } // stop the function from running
+
+      e.preventDefault();
+      const x = e.pageX - slider2.offsetLeft;
+
+      const walk = (x - startX) * 3;
+
+      slider2.scrollLeft = scrollLeft - walk;
     });
   }
 

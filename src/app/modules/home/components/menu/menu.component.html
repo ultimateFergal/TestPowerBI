@@ -8,12 +8,13 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>PUI TestPowerBI</span>
+      <!-- <span>PUI TestPowerBI</span> -->
+      <span>PUI Test</span>
     </div>
     <div fxLayout="row" fxLayoutAlign="end center" >
         <small><mat-slide-toggle [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Modo oscuro</mat-slide-toggle></small>
-        &nbsp;
-        <a *ngIf="loggedIn" (click)="logout()" role="button"><span class="glyphicon glyphicon-log-out"></span>Cerrar sessión</a>
+<!--         &nbsp;
+        <a *ngIf="loggedIn" (click)="logout()" role="button"><span class="glyphicon glyphicon-log-out"></span>Cerrar sessión</a> -->
     </div>
   </mat-toolbar>
   
@@ -37,6 +38,7 @@
           <a mat-list-item href="#"><mat-icon>shopping_cart</mat-icon>&nbsp;<p *ngIf="showFiller">Catálogos</p></a>
           <a mat-list-item href="#"><mat-icon>folder</mat-icon>&nbsp;<p *ngIf="showFiller">Carpetas</p></a>
           <a mat-list-item href="#"><mat-icon>settings_applications</mat-icon>&nbsp;<p *ngIf="showFiller">Configuraciones</p></a>
+          <a mat-list-item (click)="logout()"><mat-icon>highlight_off</mat-icon>&nbsp;<p *ngIf="showFiller">Cerrar sesión</p></a>
         </mat-nav-list>
       </mat-drawer>
 

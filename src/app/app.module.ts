@@ -53,7 +53,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       protectedResourceMap,
       logger: loggerCallback,
       correlationId: '1234',
-      piiLoggingEnabled: true
+      piiLoggingEnabled: true,
+      loadFrameTimeout: 20
     }),
   ],
   providers: [

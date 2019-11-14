@@ -7,7 +7,7 @@
 <!--   <a class="prev" (click)="swipLeft($event)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
-  <div class="row ">
+  <div class="row">
       <div class="row__inner items"  #sliderFdo id="sliderFdo">
         <div class="tile item" *ngFor="let item of pbidata;let i = index">
           <div class="tile__media">
@@ -24,6 +24,21 @@
 
   <div class="row ">
     <div class="row__inner items"  #sliderFdo1 id="sliderFdo1">
+      <div class="tile item" *ngFor="let item of pbidata;let i = index">
+        <div class="tile__media">
+            <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="row__inner items"  #sliderFdo2 id="sliderFdo2">
       <div class="tile item" *ngFor="let item of pbidata;let i = index">
         <div class="tile__media">
             <app-welcome [configExternal]="item" [embedToken]="embedToken"></app-welcome> 

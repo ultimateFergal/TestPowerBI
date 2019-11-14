@@ -62,7 +62,7 @@ export class WelcomeComponent implements OnInit {
     this.reportContainer = this.reportContainer1.nativeElement;
     this.report = this.pbiService.embed(this.reportContainer, this.config);
 
-    console.log(  this.config, 'this.config yimi dashboard');
+    console.log(  this.config, 'this.config dashboard');
 
     // console.log(this.report, 'response report');
     // console.log(this.reportContainer, 'this.reportContainer');
@@ -72,11 +72,11 @@ export class WelcomeComponent implements OnInit {
 
     // Report.on will add an event handler which prints to Log window.
     this.report.on('loaded', function() {
-      console.log('Loaded fdo');
+      console.log('Loaded testf');
     });
 
     this.report.on('error', function (event) {
-      console.log(event.detail, 'error fdo');
+      console.log(event.detail, 'error testf');
 
       this.report.off('error');
     });

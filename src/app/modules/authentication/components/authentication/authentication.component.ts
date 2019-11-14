@@ -60,19 +60,12 @@ export class AuthenticationComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   login() {
-    const isIE2 = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
-    // if (isIE2) {
     this.authService.loginRedirect();
-/*     } else {
-      this.authService.loginPopup();
-    } */
 
     this.broadcastService.subscribe('msal:loginSuccess', (payload) => {
-      // do something here
-      alert('hey!');
       this.router.navigate(['/home']);
-      });
+    });
   }
 
   logout() {

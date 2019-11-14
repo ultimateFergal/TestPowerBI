@@ -10,10 +10,6 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-/*       {
-        path: '',
-        component: WelcomeComponent,
-      }, */
       {
         path: '',
         component: DashboardComponent,
@@ -21,21 +17,7 @@ const routes: Routes = [
       {
         path: 'report-detail',
         component: ReportDetailComponent
-      }, /*
-      {
-        path: 'products',
-        data: {
-          breadcrumb: 'breadcrumb.products'
-        },
-        loadChildren: '../products/products.module#ProductsModule'
       },
-      {
-        path: 'products-group',
-        data: {
-          breadcrumb: 'breadcrumb.products'
-        },
-        loadChildren: '../products-group-management/products-group-management.module#ProductsGroupManagementModule'
-      }, */
       {
         path: '**',
         redirectTo: '',
