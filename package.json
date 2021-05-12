@@ -28,7 +28,7 @@
     "powerbi-client": "^2.10.2",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.3",
-    "swiper": "^5.1.0",
+    "swiper": "^6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
